@@ -93,8 +93,12 @@
       <!-- form -->
       <!-- resource to piece together https://tailwindui.com/components/application-ui/forms/form-layouts -->
       <div>
-        <form action="#" method="POST" class="space-y-5">
-          <div>
+        <form
+          action="#"
+          method="POST"
+          class="space-y-5 md:grid grid-cols-4 md:gap-5 md:w-3/4"
+        >
+          <div class="md:pt-5 col-span-2">
             <label for="email" class="text-gray-500 text-sm"
               >Your Email (required)</label
             >
@@ -104,21 +108,23 @@
               class="border-2 border-black rounded p-2 shadow-lg block w-full mt-2"
             />
           </div>
-          <div>
+          <div class="md:col-span-2">
             <label for="subject" class="text-gray-500 text-sm"
               >What do you want to talk about?</label
             >
-            <select
-              name="subject"
-              id="subject"
-              class="border-2 border-black w-full p-2 rounded block"
-            >
-              <option value="">I'm interested in working with you</option>
-              <option value="">I want you to speak at our conference</option>
-              <option value="">Other</option>
-            </select>
+            <div class="mt-2">
+              <select
+                name="subject"
+                id="subject"
+                class="border-2 border-black w-full p-2 rounded block"
+              >
+                <option value="">I'm interested in working with you</option>
+                <option value="">I want you to speak at our conference</option>
+                <option value="">Other</option>
+              </select>
+            </div>
           </div>
-          <div>
+          <div class="md:col-span-2">
             <label for="email" class="text-gray-500 text-sm"
               >When does the project start?</label
             >
@@ -132,7 +138,7 @@
               <option value="">Option C</option>
             </select>
           </div>
-          <div>
+          <div class="md:col-span-2">
             <label for="email" class="text-gray-500 text-sm"
               >When does it need to be finished?</label
             >
@@ -146,7 +152,7 @@
               <option value="">Option C</option>
             </select>
           </div>
-          <div>
+          <div class="md:col-span-2">
             <label for="email" class="text-gray-500 text-sm"
               >What's the estimated budge for this project?</label
             >
@@ -160,7 +166,7 @@
               <option value="">Option C</option>
             </select>
           </div>
-          <div>
+          <div class="col-span-4">
             <legend for="design" class="text-gray-500 text-sm">
               What services are you wanting to hire me for?
             </legend>
@@ -191,7 +197,7 @@
               />
               <label for="design">Strategy</label>
             </div>
-            <div class="mt-6">
+            <div class="mt-6 md:w-2/3">
               <label for="extra" class="text-gray-500 text-sm block mb-4"
                 >Anything else you would like me to know?</label
               >
@@ -203,6 +209,13 @@
                 class="block border-2 border-black rounded w-full p-5"
               ></textarea>
             </div>
+          </div>
+          <div>
+            <button
+              class="bg-black py-2 px-6 font-extrabold text-gray-100 rounded shadow uppercase mt-6"
+            >
+              Send
+            </button>
           </div>
         </form>
       </div>
