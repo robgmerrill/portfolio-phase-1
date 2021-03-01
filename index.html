@@ -15,6 +15,7 @@
     />
   </head>
   <!-- on the container element for each page I use .container .mx-auto to center content -->
+  <!-- index page has three sections - Header / Main / Footer -->
   <body class="text-gray-800 container mx-auto flex flex-col">
     <!-- ======================================================= -->
     <!-- ======================================================= -->
@@ -25,6 +26,7 @@
       id="navigation"
       class="px-5 pt-10 md:px-0 md:flex md:justify-between md:items-center relative md:static md:h-full py-10"
     >
+      <!-- div that holds the avatar and two buttons. Sibling div to the navigational links -->
       <div class="flex justify-between items-center">
         <!-- avatar -->
         <a href="/"
@@ -34,15 +36,16 @@
             class="rounded-full h-14 shadow-lg"
           />
         </a>
-        <!-- menu -->
-        <div id="menu-open" class="md:hidden text-gray-800">
+        <!-- buttons that open/close links on mobile -->
+        <button id="menu-open" class="md:hidden text-gray-800">
           <i class="fas fa-bars text-2xl"></i>
-        </div>
-        <div id="menu-close" class="hidden z-10 md:hidden text-gray-800">
+        </button>
+        <button id="menu-close" class="hidden z-10 md:hidden text-gray-800">
           <i class="fas fa-times text-2xl"></i>
-        </div>
+        </button>
       </div>
       <!-- navigation links -->
+      <!-- sibling div to the avatar and buttons -->
       <div
         id="links"
         class="absolute md:static top-0 bottom-0 left-0 right-0 flex flex-col justify-center items-center text-gray-600 text-4xl md:text-lg md:font-bold md:h-full md:inline-block space-y-4 hidden md:space-x-12"
@@ -75,12 +78,13 @@
     <!-- Index Main -->
     <!-- ======================================================= -->
     <!-- ======================================================= -->
+    <!--  -->
     <main
-      class="container lg:mx-auto max-w-5xl my-28 px-5 md:h-96 md:flex md:justify-center md:items-center"
+      class="md:mx-auto max-w-5xl my-28 px-5 md:h-96 md:flex md:justify-center md:items-center"
     >
       <div>
         <h1
-          class="text-4xl font-extrabold text-gray-700 leading-normal p-5 text-center"
+          class="text-4xl font-extrabold text-gray-700 leading-normal p-5 md:text-center text-left"
         >
           I help businesses grow by creating software experiences that are
           simple and delightful.
